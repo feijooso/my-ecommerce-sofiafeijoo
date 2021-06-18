@@ -1,14 +1,19 @@
 import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className='App'>
-      <h1>Las plantas de Sofi</h1>
-      <h2>Coming soon</h2>
-      <p>Soy Sofi y voy a estar vendiendo plantas en este sitio proximamente :)</p>
-    </div>
-    
-  );
+//COMPONENTS
+import Header from './components/header/header';
+
+class App extends React.Component {
+  render(){
+    return (
+      <div className='container'>
+        <Header />
+        <h2>Coming soon...</h2>
+      </div>
+      
+    )
+  }
 }
 
 export default App;
