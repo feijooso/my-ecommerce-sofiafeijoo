@@ -2,6 +2,7 @@ import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
 import img from './logo.png';
 import './header.css';
+import Cart from '../cart/cart';
 
 function header() {
     return (
@@ -21,7 +22,7 @@ function header() {
                         <Button color="inherit">FAQ</Button>
                     </div>
 
-
+                    <Cart />
 
                 </Toolbar>
             </AppBar>
