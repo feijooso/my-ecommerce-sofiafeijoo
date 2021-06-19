@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div className='container'>
         <Header />
-        <ItemListContainer greeting={'Hola'}/>
+        <ItemListContainer greeting={'Bienvenidx!'}/>
       </div>
       
     )
