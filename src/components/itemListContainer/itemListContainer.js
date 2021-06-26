@@ -8,9 +8,9 @@ const promise = () =>{
         setTimeout(
             () =>
             resolve([
-                {id:1, title:'Potus',img:'./potus.jpg', description:'Soporta bien la escasez de luz y tan solo es necesario regarlo cuando se seca la tierra de la maceta. Su sitio ideal es en lo alto de muebles y estantes ya que sus ramas se transforman en colgantes al crecer'},
-                {id:2, title:'Cintas',img:'./cintas.jpg', description:'Es súper decorativa y necesita mínima atención. Soporta temperaturas altas y no necesita demasiada luz'},
-                {id:3, title:'Lirio',img:'./lirio.jpg', description:'Purifica de forma natural y desprende elegancia. Se adapta a diferentes temperaturas y a distintos niveles de luz y humedad.'},
+                {id:1, title:'Potus',img:'./potus.jpg',stock:'12', description:'Soporta bien la escasez de luz y tan solo es necesario regarlo cuando se seca la tierra de la maceta. Su sitio ideal es en lo alto de muebles y estantes ya que sus ramas se transforman en colgantes al crecer'},
+                {id:2, title:'Cintas',img:'./cintas.jpg',stock:'5', description:'Es súper decorativa y necesita mínima atención. Soporta temperaturas altas y no necesita demasiada luz'},
+                {id:3, title:'Lirio',img:'./lirio.jpg',stock:'10', description:'Purifica de forma natural y desprende elegancia. Se adapta a diferentes temperaturas y a distintos niveles de luz y humedad.'},
             ]),2000);
         
     });
