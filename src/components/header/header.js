@@ -16,10 +16,10 @@ function header() {
                     </Typography>
 
                     <div className='menu'>
-                        <Button color="inherit">Plantas</Button>
-                        <Button color="inherit">Macetas</Button>
-                        <Button color="inherit">Accesorios</Button>
+                        <Button color="inherit">Home</Button>
+                        <Button color="inherit">Tienda</Button>
                         <Button color="inherit">FAQ</Button>
+                        <Button color="inherit">Contacto</Button>
                     </div>
 
                     <Cart />

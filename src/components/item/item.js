@@ -5,22 +5,22 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ItemCount from '../itemCount/itemCount';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    margin: 10,
   },
   media: {
-    height: 140,
+    height: 240,
   },
 });
 
 export default function MediaCard(props) {
   const classes = useStyles();
-  console.log(props.planta.img)
+  //console.log(props.planta.img)
 
   return (
     <Card className={classes.root}>
@@ -41,9 +41,6 @@ export default function MediaCard(props) {
       </CardActionArea>
       <CardActions>
         <ItemCount stock={props.planta.stock}/>
-        <Button size="small" color="primary">
-          Agregar al carrito
-        </Button>
       </CardActions>
     </Card>
   );

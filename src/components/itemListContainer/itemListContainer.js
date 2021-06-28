@@ -31,7 +31,6 @@ function ItemListContainer(){
 
     return(
         <ItemList plantas={productos}/>
-       //<p>{productos.length}</p>
     );
 };
 
