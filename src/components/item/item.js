@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import ItemCount from '../itemCount/itemCount';
-import { Button } from '@material-ui/core';
 import {Link} from "react-router-dom";
 
 const useStyles = makeStyles({

@@ -17,12 +17,15 @@ function header() {
                     </Typography>
 
                     <div className='menu'>
-                        {/* <Button color="inherit">Home</Button>
-                        <Button color="inherit">Tienda</Button>
-                        <Button color="inherit">FAQ</Button>
-                        <Button color="inherit">Contasecto</Button> */}
-                        <Link to="/" className="Link">Home</Link>
-                        <Link to="/tienda" className="Link">Tienda</Link>
+                        <Link to="/" className="Link">
+                            <Button color="inherit">Home</Button>
+                        </Link>
+                        <Link to="/tienda" className="Link">
+                            <Button color="inherit">Tienda</Button>
+                        </Link>
+                        <Link to="/contacto" className="Link">
+                            <Button color="inherit">Contacto</Button>
+                        </Link>
                     </div>
 
                     <Cart />

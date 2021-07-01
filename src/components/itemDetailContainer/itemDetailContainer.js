@@ -12,7 +12,6 @@ function ItemDetailContainer() {
             .then((res)=> res.find(item => item.id == id))
             .then((foundItem) => setItem(foundItem));
     },[])
-    console.log(item);
 
     return (
         <div>
