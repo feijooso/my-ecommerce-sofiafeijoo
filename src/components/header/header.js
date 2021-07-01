@@ -3,6 +3,7 @@ import React from 'react';
 import img from './logo.png';
 import './header.css';
 import Cart from '../cart/cart';
+import {Link} from "react-router-dom";
 
 function header() {
     return (
@@ -16,10 +17,12 @@ function header() {
                     </Typography>
 
                     <div className='menu'>
-                        <Button color="inherit">Home</Button>
+                        {/* <Button color="inherit">Home</Button>
                         <Button color="inherit">Tienda</Button>
                         <Button color="inherit">FAQ</Button>
-                        <Button color="inherit">Contacto</Button>
+                        <Button color="inherit">Contacto</Button> */}
+                        <Link to="/" className="Link">Home</Link>
+                        <Link to="/tienda" className="Link">Tienda</Link>
                     </div>
 
                     <Cart />
