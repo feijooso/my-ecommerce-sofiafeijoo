@@ -7,6 +7,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import ItemCount from '../itemCount/itemCount';
+import { Button } from '@material-ui/core';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -20,16 +22,19 @@ const useStyles = makeStyles({
 
 export default function MediaCard(props) {
   const classes = useStyles();
-  //console.log(props.planta.img)
+  const path = "./item/"+props.planta.id;
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
+      <Link to={path}>
         <CardMedia
-          className={classes.media}
-          image= {props.planta.img}
-          title={props.planta.title}
-        />
+            className={classes.media}
+            image= {props.planta.img}
+            title={props.planta.title}
+          />
+      </Link>
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.planta.title}
@@ -41,6 +46,7 @@ export default function MediaCard(props) {
       </CardActionArea>
       <CardActions>
         <ItemCount stock={props.planta.stock}/>
+        
       </CardActions>
     </Card>
   );

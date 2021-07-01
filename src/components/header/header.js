@@ -20,7 +20,7 @@ function header() {
                         {/* <Button color="inherit">Home</Button>
                         <Button color="inherit">Tienda</Button>
                         <Button color="inherit">FAQ</Button>
-                        <Button color="inherit">Contacto</Button> */}
+                        <Button color="inherit">Contasecto</Button> */}
                         <Link to="/" className="Link">Home</Link>
                         <Link to="/tienda" className="Link">Tienda</Link>
                     </div>
