@@ -38,8 +38,8 @@ export default function MediaCard(props) {
           <Typography gutterBottom variant="h5" component="h2">
             {props.planta.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.planta.description}
+          <Typography variant="body1" color="textSecondary" component="p">
+            Precio: ${props.planta.price}
           </Typography>
         </CardContent>
       </CardActionArea>

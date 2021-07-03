@@ -35,7 +35,7 @@ function ItemListContainer(){
     // }
 
     useEffect(() => {
-        fetch('https://mocki.io/v1/6626133f-3066-45a5-a4c1-b4d549c2ecaf')
+        fetch('https://mocki.io/v1/cb8d8d8f-4468-427c-bbb1-a651f64f84b4')
             .then((response) => response.json())
             .then((res)=> setProductos(res));
         //consultarPromesa();

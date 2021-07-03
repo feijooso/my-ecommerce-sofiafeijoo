@@ -5,7 +5,7 @@ function itemDetail(props) {
     return (
         <div>
             <p>{props.item.title}</p>
-            <p>{props.item.description}</p>            
+            <p>{props.item.description}</p>                        
         </div>
     )
 }

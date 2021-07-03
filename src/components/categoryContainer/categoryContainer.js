@@ -1,23 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import ItemDetail from '../itemDetail/itemDetail';
+import ItemList from '../itemList/itemList';
 
 function ItemDetailContainer() {
-    const {id} = useParams();
-    const [item, setItem] = useState([]);
+    const {category} = useParams();
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
         fetch('https://mocki.io/v1/cb8d8d8f-4468-427c-bbb1-a651f64f84b4')
             .then((response) => response.json())
-            .then((res)=> res.find(item => item.id == id))
-            .then((foundItem) => setItem(foundItem));
-    },[id])
+            .then((res)=> res.filter(item => item.category == category))
+            .then((filteredItems) => setItems(filteredItems));
+    },[])
 
     return (
-        <div>
-            <ItemDetail item={item}/>
-        </div>
-    )
+        <ItemList plantas={items}/>
+        );
 }
 
 export default ItemDetailContainer
