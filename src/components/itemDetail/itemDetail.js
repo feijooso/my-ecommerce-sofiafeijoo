@@ -1,7 +1,7 @@
 import React from 'react';
 
 function itemDetail(props) {
-    console.log(props);
+    //console.log(props);
     return (
         <div>
             <p>{props.item.title}</p>

@@ -11,11 +11,14 @@ import Tienda from "./views/tienda/tienda";
 import Contacto from "./views/contacto/contacto"
 import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
 import CategoryContainer from "./components/categoryContainer/categoryContainer";
+import {CartProvider} from "./context/cartContext";
+import Cart from "./components/cart/cart";
 
 
 class App extends React.Component {
   render(){
     return (
+      <CartProvider>
       <Router>
         <div className='app'>
           <Header/>
@@ -25,10 +28,12 @@ class App extends React.Component {
             <Route path="/item/:id" component={ItemDetailContainer}/>
             <Route path="/contacto" component={Contacto}/>
             <Route path="/category/:category" component={CategoryContainer}/>
+            <Route path="/cart" component={Cart}/>
             <Route path="/" component={Home}/>
           </Switch>
         </div>
       </Router>
+      </CartProvider>
 
       
     )

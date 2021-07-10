@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import ItemCount from '../itemCount/itemCount';
 import {Link} from "react-router-dom";
+import { useCartContext } from '../../context/cartContext';
 
 const useStyles = makeStyles({
   root: {
@@ -22,6 +23,11 @@ const useStyles = makeStyles({
 export default function MediaCard(props) {
   const classes = useStyles();
   const path = "./item/"+props.planta.id;
+  const {addToCart} = useCartContext();
+
+  const onAdd = cant => {
+    addToCart(props.planta, cant)
+  };
 
   return (
     <Card className={classes.root}>
@@ -44,7 +50,8 @@ export default function MediaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ItemCount stock={props.planta.stock}/>
+      {props.planta.stock > 0 && <ItemCount stock={props.planta.stock} onAdd={onAdd}/>}
+      {props.planta.stock <= 0 && <p>Sin stock</p>}
         
       </CardActions>
     </Card>

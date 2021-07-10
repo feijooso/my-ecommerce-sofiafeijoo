@@ -2,12 +2,13 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 
-function ItemCount (prop) {
+
+function ItemCount ({ stock, onAdd }) {
 
     const [number, setNumber] = React.useState(0);
 
     const handleIncrement = () => {
-        if(number < prop.stock)
+        if(number < stock)
             setNumber(number+1);
     }
 
@@ -24,7 +25,7 @@ function ItemCount (prop) {
                 <Button>{number}</Button>
                 <Button onClick={handleIncrement}>+</Button>
             </ButtonGroup>
-            <Button size="small" color="primary">
+            <Button onClick={() => onAdd(number)} size="small" color="primary">
                 Agregar al carrito
             </Button>
         </div>

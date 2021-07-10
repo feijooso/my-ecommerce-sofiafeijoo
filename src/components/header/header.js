@@ -1,8 +1,8 @@
 import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
-import img from './logo.png';
+import logo from './logo.png';
+import cart from './cart.png';
 import './header.css';
-import Cart from '../cart/cart';
 import {Link} from "react-router-dom";
 
 function header() {
@@ -10,7 +10,7 @@ function header() {
         <div>
             <AppBar position='static'>
                 <Toolbar>
-                    <img src={img} alt='logo' width='80px'/>
+                    <img src={logo} alt='logo' width='80px'/>
 
                     <Typography variant='h6'>
                         Las plantas de Sofi
@@ -28,7 +28,9 @@ function header() {
                         </Link>
                     </div>
 
-                    <Cart />
+                    <Link to="/cart">
+                        <img src={cart} alt='cart' width='40px'/>
+                    </Link>
 
                 </Toolbar>
             </AppBar>
