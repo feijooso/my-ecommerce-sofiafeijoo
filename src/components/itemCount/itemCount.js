@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
+import {Link} from "react-router-dom";
 
 
 function ItemCount ({ stock, onAdd }) {
@@ -28,6 +29,9 @@ function ItemCount ({ stock, onAdd }) {
             <Button onClick={() => onAdd(number)} size="small" color="primary">
                 Agregar al carrito
             </Button>
+            <Link to="/cart">
+                <Button>Ver carrito</Button>
+            </Link>
         </div>
         
     )

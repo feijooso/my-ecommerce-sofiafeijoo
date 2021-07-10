@@ -5,7 +5,7 @@ import { useCartContext } from '../../context/cartContext';
 const Cart = () => {
   const { cart, clearCart } = useCartContext();
 
-  if (!cart.length) return <Redirect to='/' />;
+  if (!cart.length) return <p>Carrito vacio</p>;
 
   return (
     <div>
