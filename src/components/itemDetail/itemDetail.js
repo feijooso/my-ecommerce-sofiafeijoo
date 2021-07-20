@@ -18,12 +18,14 @@ const useStyles = makeStyles({
     media: {
       height: 240,
     },
-  });
+  }); 
 
 function ItemDetail(props) {
     const classes = useStyles();
-    const {addToCart} = useCartContext();
+    const {addToCart, getActualStock} = useCartContext();
 
+    const actualStock = getActualStock(props.item);
+    
     const onAdd = cant => {
       addToCart(props.item, cant)
     };
@@ -48,15 +50,15 @@ function ItemDetail(props) {
                         {props.item.description}
                     </Typography>
                     <Typography variant="body1" color="textSecondary" component="p">
-                        Stock: {props.item.stock}
+                        Stock: {actualStock}
                     </Typography>
 
                 </CardContent>
                 </CardActionArea>
 
                 <CardActions>
-                {props.item.stock > 0 && <ItemCount stock={props.item.stock} onAdd={onAdd}/>}
-                {props.item.stock <= 0 && <p>Sin stock</p>}
+                {actualStock > 0 && <ItemCount stock={actualStock} onAdd={onAdd}/>}
+                {actualStock <= 0 && <p>Sin stock</p>}
                 </CardActions>
             </Card>
         </div>

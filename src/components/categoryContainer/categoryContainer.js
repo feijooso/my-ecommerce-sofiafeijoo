@@ -14,7 +14,6 @@ function ItemDetailContainer() {
         (async ()=> {
             const response = await itemsCollection.get();
             var filteredItems = response.docs.filter(item => item.data().category == category);
-            console.log(filteredItems)
             setItems(filteredItems.map(item => ({id:item.id, ...item.data()})));
         })();
     }, [])
