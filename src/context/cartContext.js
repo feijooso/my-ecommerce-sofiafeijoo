@@ -1,8 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
 export const CartContext = createContext({});
-export const useCartContext = () => useContext(CartContext); /* tipo hook  */
-
+export const useCartContext = () => useContext(CartContext);
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);  
 
@@ -24,7 +23,7 @@ export const CartProvider = ({children}) => {
           }
     };
 
-    const getActualStock = product => { /* actual stock is db stock minus whats in the cart */
+    const getActualStock = product => { /* actual stock is db stock minus amount in cart */
       const foundItem = cart.find(item => item.id === product.id);
       return foundItem ? product.stock - foundItem.cantidad : product.stock;
     };
