@@ -27,9 +27,11 @@ export const CartProvider = ({children}) => {
     const getActualStock = product => { /* actual stock is db stock minus whats in the cart */
       const foundItem = cart.find(item => item.id === product.id);
       return foundItem ? product.stock - foundItem.cantidad : product.stock;
-    }
+    };
 
-    return <CartContext.Provider value = {{cart,setCart, clearCart, addToCart, getActualStock}}>
+    const removeItem = (id) => setCart(cart.filter(item => item.id !== id));
+
+    return <CartContext.Provider value = {{cart,setCart, clearCart, addToCart, getActualStock, removeItem}}>
         {children}
     </CartContext.Provider>
 }
