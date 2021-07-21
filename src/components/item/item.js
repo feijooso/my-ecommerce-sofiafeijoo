@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 
 export default function MediaCard(props) {
   const classes = useStyles();
-  const path = "./item/"+props.planta.id;
+  const path = "/item/"+props.planta.id;
   const {addToCart} = useCartContext();
 
   const onAdd = cant => {

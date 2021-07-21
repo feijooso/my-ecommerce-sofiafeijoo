@@ -10,7 +10,6 @@ import Home from "./views/home/home";
 import Tienda from "./views/tienda/tienda";
 import Contacto from "./views/contacto/contacto"
 import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
-import CategoryContainer from "./components/categoryContainer/categoryContainer";
 import {CartProvider} from "./context/cartContext";
 import Cart from "./components/cart/cart";
 
@@ -27,7 +26,7 @@ class App extends React.Component {
             <Route path="/tienda" component={Tienda}/>
             <Route path="/item/:id" component={ItemDetailContainer}/>
             <Route path="/contacto" component={Contacto}/>
-            <Route path="/category/:category" component={CategoryContainer}/>
+            <Route path="/category/:category" component={Tienda}/>
             <Route path="/cart" component={Cart}/>
             <Route path="/" component={Home}/>
           </Switch>
