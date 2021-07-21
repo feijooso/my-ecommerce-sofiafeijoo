@@ -20,19 +20,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const calcularTotal = (cart, total) => {
-  cart.map((item) => (total+=item.price*item.cantidad))
-};
-
 const Cart = () => {
   const { cart, clearCart, removeItem } = useCartContext();
   const classes = useStyles();
   const [total, setTotal] = useState(0);
 
+  const precioPorProducto = () => {
+    let total = cart.map(producto => producto.price*producto.cantidad).reduce((acum,valor) => {
+      return acum + valor;
+    }, 0)
+    setTotal(total);
+  }
+
   useEffect(() => {
-    setTotal(calcularTotal(cart,0));
-    console.log(total);
-  }, [total]);  
+    precioPorProducto();
+  }, [cart]);  
 
   if (!cart.length) return (
     <div>
