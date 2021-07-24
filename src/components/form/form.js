@@ -18,7 +18,8 @@ const FormComponent = ({ addOrder }) => {
 
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
-		addOrder(values);
+		const id = addOrder(values);
+		console.log(id);
 		setValues({ ...initialState });
 	};
 
@@ -48,7 +49,7 @@ const FormComponent = ({ addOrder }) => {
                 <input type="submit" value="Submit"/>
             </form>
 
-            {orderId != "" && <p>Orden numero {orderId}</p>}
+            {orderId != "" && <p>Orden numero</p>}
 
 		</div>
 	);
