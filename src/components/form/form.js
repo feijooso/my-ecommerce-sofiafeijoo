@@ -9,7 +9,6 @@ const FormComponent = ({ addOrder }) => {
 	};
 
 	const [values, setValues] = useState(initialState);
-    const [orderId, setOrderId] = useState("");
 
 	const handleOnChange = (e) => {
 		const { name, value } = e.target;
@@ -18,8 +17,7 @@ const FormComponent = ({ addOrder }) => {
 
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
-		const id = addOrder(values);
-		console.log(id);
+		addOrder(values);
 		setValues({ ...initialState });
 	};
 
@@ -48,8 +46,6 @@ const FormComponent = ({ addOrder }) => {
                     
                 <input type="submit" value="Submit"/>
             </form>
-
-            {orderId != "" && <p>Orden numero</p>}
 
 		</div>
 	);
