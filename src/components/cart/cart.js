@@ -70,6 +70,10 @@ const Cart = () => {
                 <Button onClick={clearCart} color="primary">Vaciar carrito</Button>
         </Link>
 
+        <Link to="/checkout" className="Link">
+                <Button color="primary">Finalizar compra</Button>
+        </Link>
+
     </div>
   )
 }

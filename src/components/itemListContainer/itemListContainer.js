@@ -12,14 +12,14 @@ function ItemListContainer(){
     useEffect(() => {
         if(category){
             (async ()=> {
-                const response = await itemsCollection.get();
+                const response = await itemsCollection.collection("productos").get();
                 var filteredItems = response.docs.filter(item => item.data().category == category);
                 setItems(filteredItems.map(item => ({id:item.id, ...item.data()})));
             })();
 
         }else {
             (async ()=> {
-                const response = await itemsCollection.get();
+                const response = await itemsCollection.collection("productos").get();
                 setItems(response.docs.map(item => ({id:item.id, ...item.data()})))
             })();
         }

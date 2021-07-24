@@ -12,6 +12,7 @@ import Contacto from "./views/contacto/contacto"
 import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
 import {CartProvider} from "./context/cartContext";
 import Cart from "./components/cart/cart";
+import Checkout from "./views/checkout/checkout";
 
 
 class App extends React.Component {
@@ -28,6 +29,7 @@ class App extends React.Component {
             <Route path="/contacto" component={Contacto}/>
             <Route path="/category/:category" component={Tienda}/>
             <Route path="/cart" component={Cart}/>
+            <Route path="/checkout" component={Checkout}/>
             <Route path="/" component={Home}/>
           </Switch>
         </div>

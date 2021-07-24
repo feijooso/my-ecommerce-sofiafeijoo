@@ -14,4 +14,5 @@ var firebaseConfig = {
   // Initialize Firebase
 
 const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
-export const itemsCollection = firebase.firestore(app).collection("productos");
+export const itemsCollection = firebase.firestore(app);
+  
