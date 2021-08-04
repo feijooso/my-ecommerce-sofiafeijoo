@@ -9,7 +9,7 @@ const mainFeaturedPost = {
   title: '¡Encontrá tu planta ideal!',
   description:
     "Seleccionamos las mejores plantas para que te acompañen en tu hogar. Todas son empaquetadas cuidadosamente y con material compostable",
-  image: 'https://source.unsplash.com/random',
+  image: 'https://firebasestorage.googleapis.com/v0/b/my-ecommerce-chofi.appspot.com/o/home.jpg?alt=media&token=822e154a-0633-46f9-b8b5-b39ba2b09d3a',
   imgText: 'jardin',
   linkText: 'Ir a la tienda',
 };
