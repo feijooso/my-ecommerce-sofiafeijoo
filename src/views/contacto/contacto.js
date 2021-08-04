@@ -9,6 +9,7 @@ import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginTop: 40,
   },
   paper: {
     padding: theme.spacing(2),
@@ -25,7 +26,7 @@ function Contacto() {
       <Grid container spacing={3}>
         
         <Grid item xs={6}>
-          <Paper className={classes.paper}>img</Paper>
+          <img alt="contact" height="750" src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-chofi.appspot.com/o/contacto.jpg?alt=media&token=89a1a464-629d-4529-afe9-06efbf150176"></img>
         </Grid>
 
         <Grid item xs={6}>
