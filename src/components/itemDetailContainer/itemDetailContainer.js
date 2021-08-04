@@ -10,7 +10,7 @@ function ItemDetailContainer() {
 
     useEffect(() => {
         (async ()=> {
-            const response = await itemsCollection.doc(id).get();
+            const response = await itemsCollection.collection("productos").doc(id).get();
             setItem({id: response.id, ...response.data()});
         })();
     }, [id])
