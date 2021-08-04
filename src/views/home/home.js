@@ -22,6 +22,7 @@ const featuredPosts = [
       '¿Querés una planta y no sabés cuál? Nosotrxs te ayudamos. Visitá nuestra tienda y elegí la que más te guste.',
     image: 'https://firebasestorage.googleapis.com/v0/b/my-ecommerce-chofi.appspot.com/o/adan.jpg?alt=media&token=365959ec-5322-4b39-9f73-79ea3c5cd3cd',
     imageText: 'plantas',
+    category: 'planta',
   },
   {
     title: 'Macetas',
@@ -29,6 +30,7 @@ const featuredPosts = [
       'Los diseños de macetas más originales para decorar tu hogar. Todas son hechas a mano con materiales resistentes al agua y mucho amor <3',
     image: 'https://firebasestorage.googleapis.com/v0/b/my-ecommerce-chofi.appspot.com/o/flowers.jpg?alt=media&token=01c2ffa2-24d0-4e6b-86ec-757bf244412d',
     imageText: 'macetas',
+    category: 'maceta',
   },
 ];
 
