@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import MainFeaturedPost from '../../components/mainFeaturedPost/MainFeaturedPost';
 import FeaturedPost from '../../components/featuredPost/FeaturedPost';
+import ProductsPreview from '../../components/productsPreview/ProductsPreview';
 
 const mainFeaturedPost = {
   title: '¡Encontrá tu planta ideal!',
@@ -19,14 +20,14 @@ const featuredPosts = [
     title: 'Plantas',
     description:
       '¿Querés una planta y no sabés cuál? Nosotrxs te ayudamos. Visitá nuestra tienda y elegí la que más te guste.',
-    image: 'https://source.unsplash.com/random',
+    image: 'https://firebasestorage.googleapis.com/v0/b/my-ecommerce-chofi.appspot.com/o/adan.jpg?alt=media&token=365959ec-5322-4b39-9f73-79ea3c5cd3cd',
     imageText: 'plantas',
   },
   {
     title: 'Macetas',
     description:
       'Los diseños de macetas más originales para decorar tu hogar. Todas son hechas a mano con materiales resistentes al agua y mucho amor <3',
-    image: 'https://source.unsplash.com/random',
+    image: 'https://firebasestorage.googleapis.com/v0/b/my-ecommerce-chofi.appspot.com/o/flowers.jpg?alt=media&token=01c2ffa2-24d0-4e6b-86ec-757bf244412d',
     imageText: 'macetas',
   },
 ];
@@ -45,6 +46,7 @@ export default function Home() {
             ))}
           </Grid>
         </main>
+        <ProductsPreview/>
       </Container>
     </React.Fragment>
   );
