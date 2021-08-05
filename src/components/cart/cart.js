@@ -7,6 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles((theme) => ({
   listItem: {
@@ -17,6 +20,15 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     marginTop: theme.spacing(2),
+  },
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    marginTop: 20,
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
   },
 }));
 
@@ -46,34 +58,37 @@ const Cart = () => {
     );
 
   return (
-    <div>
-      <Typography variant="h6" gutterBottom>Resumen de la compra</Typography>
-      <div style={{ display:'flex', justifyContent:'center' }}>
-        <List disablePadding >
-                {cart.map((item) => (
-                  <ListItem className={classes.listItem} key={item.title}>
-                    <ListItemText primary={item.title}/>
-                    <Typography variant="body1">{item.cantidad}x ${item.price}</Typography>
-                    <Typography variant="body2"> <span onClick={()=>removeItem(item.id)}>X</span></Typography>
-                  </ListItem>
-                ))}
-                <ListItem className={classes.listItem}>
-                  <ListItemText primary="Total" />
-                  <Typography variant="subtitle1" className={classes.total}>
-                    ${total}
-                  </Typography>
+    <div className={classes.root}>
+        <Grid item xs={12} container direction="row" justify="center" alignItems="center">
+          <Paper className={classes.paper}>
+          <Typography variant="h6" gutterBottom>Resumen de la compra</Typography>
+            <div style={{ display:'flex', justifyContent:'center' }}>
+            <List disablePadding >
+              {cart.map((item) => (
+                <ListItem className={classes.listItem} key={item.title}>
+                  <ListItemText primary={item.title}/>
+                  <Typography variant="body1">{item.cantidad}x ${item.price}</Typography>
+                  <DeleteIcon onClick={()=>removeItem(item.id)}></DeleteIcon>
                 </ListItem>
-        </List>
-      </div>
+              ))}
+              <ListItem className={classes.listItem}>
+                <ListItemText primary="Total" />
+                <Typography variant="subtitle1" className={classes.total}>
+                  ${total}
+                </Typography>
+              </ListItem>
+            </List>
+            </div>
 
-        <Link to="/tienda" className="Link">
-                <Button onClick={clearCart} color="primary">Vaciar carrito</Button>
-        </Link>
+            <Link to="/tienda" className="Link">
+              <Button variant="contained" onClick={clearCart} color="primary">Vaciar carrito</Button>
+            </Link>
 
-        <Link to="/checkout" className="Link">
-                <Button color="primary">Finalizar compra</Button>
-        </Link>
-
+            <Link to="/checkout" className="Link">
+                    <Button variant="contained" color="primary">Finalizar compra</Button>
+            </Link>
+          </Paper>
+        </Grid>
     </div>
   )
 }

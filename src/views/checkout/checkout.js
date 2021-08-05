@@ -8,13 +8,6 @@ function Checkout() {
     const [orderId, setOrderId] = useState("");
 
 
-/*     const addOrder = async (values) => {
-        const fecha = new Date();
-		let res = await itemsCollection.collection('ordenes').add({...cart, nombre: values.nombre, telefono: values.telefono, mail: values.mail, fecha: fecha}).then(data=> data.id);
-        console.log(res);
-        //setOrderId(data.id);
-    };
- */
     const addOrder = async(values)=> {
         const fecha = new Date();
         await itemsCollection.collection('ordenes')
