@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
+import { useCartContext } from '../../context/cartContext';
 import './form.css';
 
 const FormComponent = ({ addOrder }) => {
+	const {clearCart} = useCartContext();
+
 	const initialState = {
         nombre: '',
         telefono:'',
@@ -20,6 +23,7 @@ const FormComponent = ({ addOrder }) => {
 		e.preventDefault();
 		addOrder(values);
 		setValues({ ...initialState });
+		clearCart();
 	};
 
 	return (
@@ -31,18 +35,21 @@ const FormComponent = ({ addOrder }) => {
 						onChange={handleOnChange}
 						name='nombre'
 						value={values.nombre}
+						required
 					/>
 					<input
 						placeholder='Telefono'
 						onChange={handleOnChange}
 						name='telefono'
 						value={values.telefono}
+						required
 					/>
 					<input
 						placeholder='Mail'
 						onChange={handleOnChange}
 						name='mail'
 						value={values.mail}
+						required
 					/>
 					<input type="submit" value="Submit"/>
 				</form>
