@@ -1,11 +1,15 @@
 import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
 import logo from './logo.png';
-import cart from './cart.png';
+import emptycart from './emptycart.png';
+import fullcart from './fullcart.png';
 import './header.css';
+import { useCartContext } from '../../context/cartContext';
 import {Link} from "react-router-dom";
 
-function header() {
+function Header() {
+    const { cart } = useCartContext();
+
     return (
         <div>
             <AppBar position='static'>
@@ -29,7 +33,8 @@ function header() {
                     </div>
 
                     <Link to="/cart">
-                        <img src={cart} alt='cart' width='40px'/>
+                    {cart.length != 0 && <img src={fullcart} alt='cart' width='50px'/>}
+                    {cart.length == 0 && <img src={emptycart} alt='cart' width='50px'/>}
                     </Link>
 
                 </Toolbar>
@@ -38,4 +43,4 @@ function header() {
     )
 }
 
-export default header
+export default Header
