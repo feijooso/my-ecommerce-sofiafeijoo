@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Grid from '@material-ui/core/Grid';
 import './form.css';
 
 const FormComponent = ({ addOrder }) => {
@@ -22,32 +23,31 @@ const FormComponent = ({ addOrder }) => {
 	};
 
 	return (
-		<div className='form-container'>
-
-            <form onSubmit={handleOnSubmit}>
-                <input
+		<Grid item xs={12} container direction="row" justify="center" alignItems="center">
+			<div className='form-container'>
+				<form onSubmit={handleOnSubmit}>
+					<input
 						placeholder='Nombre'
 						onChange={handleOnChange}
 						name='nombre'
 						value={values.nombre}
-				/>
-                <input
+					/>
+					<input
 						placeholder='Telefono'
 						onChange={handleOnChange}
 						name='telefono'
 						value={values.telefono}
-				/>
-                <input
-                        placeholder='Mail'
+					/>
+					<input
+						placeholder='Mail'
 						onChange={handleOnChange}
 						name='mail'
 						value={values.mail}
-                />
-                    
-                <input type="submit" value="Submit"/>
-            </form>
-
-		</div>
+					/>
+					<input type="submit" value="Submit"/>
+				</form>
+			</div>
+		</Grid>
 	);
 };
 
