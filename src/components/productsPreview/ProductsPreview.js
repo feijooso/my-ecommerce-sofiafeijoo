@@ -7,6 +7,7 @@ import {itemsCollection} from '../../firebase';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles({
     root: {
@@ -50,7 +51,9 @@ export default function ProductsPreview(){
                 </div>
              ))}
         </ul>
-        <Button variant="contained" color="primary"> Ver todo</Button>
+        <Link to="/tienda" className="Link">
+            <Button variant="contained" color="primary"> Ver todo</Button>
+        </Link>
         
         </>
     );
